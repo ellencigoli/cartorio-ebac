@@ -112,6 +112,7 @@ int deletar ()
 
 int main ()
     {
+    setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	int opcao=0; //Definindo variáveis
 	int laco=1;
 	char senhadigitada[10]="a";
