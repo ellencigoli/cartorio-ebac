@@ -26,10 +26,6 @@ Cartório da EBAC is a C application to register names and additional informatio
 
 This project is still in the initial phase, and contributions are welcome. Feel free to open issues or send pull requests.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 --- 
 
 Feel free to customize or add more details as needed!
