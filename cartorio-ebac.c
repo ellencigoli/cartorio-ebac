@@ -1,59 +1,59 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usu·rio
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo em memÛria
-#include <locale.h> // bibiloteca de alocaÁıes de texto por regi„o
-#include <string.h> // biblioteca respons·vel por cuidar das strings
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usu√°rio
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo em mem√≥ria
+#include <locale.h> // bibiloteca de aloca√ß√µes de texto por regi√£o
+#include <string.h> // biblioteca respons√°vel por cuidar das strings
 
-int registro () // FunÁ„o respons·vel por cadastrar os usu·rios no sistema
+int registro () // Fun√ß√£o respons√°vel por cadastrar os usu√°rios no sistema
 {
-	// Inicio criaÁ„o de vari·veis/string
+	// Inicio cria√ß√£o de vari√°veis/string
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	// Final da criaÁ„o de vari·veis/string
+	// Final da cria√ß√£o de vari√°veis/string
 	
-	printf("Digite o CPF a ser cadastrado: "); // Coletando informaÁ„o do usu·rio
+	printf("Digite o CPF a ser cadastrado: "); // Coletando informa√ß√£o do usu√°rio
 	scanf("%s",cpf); // %s refere-se as strings
 	
-	strcpy(arquivo, cpf); // Respons·vel por copiar os valores das strings
+	strcpy(arquivo, cpf); // Respons√°vel por copiar os valores das strings
 	
 	FILE *file; // Cria o arquivo
 	file = fopen (arquivo,"w"); // Cria o arquivo e o "w" significa escrever
-	fprintf(file,cpf); // Salva o valor da vari·vel 
+	fprintf(file,cpf); // Salva o valor da vari√°vel 
 	fclose (file); // Fecha o arquivo
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
 	fprintf(file,","); // Separa por virgula o conteudo
 	fclose(file); // Fecha o arquivo
 	
-	printf("Digite o nome a ser cadastrado: "); // Coletando informaÁ„o do usu·rio
+	printf("Digite o nome a ser cadastrado: "); // Coletando informa√ß√£o do usu√°rio
 	scanf("%s",nome); // %s refere-se as strings
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
-	fprintf(file,nome); // Salva o valor da vari·vel
+	fprintf(file,nome); // Salva o valor da vari√°vel
 	fclose(file); // Fecha o arquivo
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
 	fprintf(file,","); // Separa por virgula o conteudo
 	fclose(file); // Fecha o arquivo
 	
-	printf("Digite o sobrenome a ser cadastrado: "); // Coletando informaÁ„o do usu·rio
+	printf("Digite o sobrenome a ser cadastrado: "); // Coletando informa√ß√£o do usu√°rio
 	scanf("%s",sobrenome); // %s refere-se as strings
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
-	fprintf(file,sobrenome); // Salva o valor da vari·vel
+	fprintf(file,sobrenome); // Salva o valor da vari√°vel
 	fclose(file); // Fecha o arquivo
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
 	fprintf(file,","); // Separa por virgula o conteudo
 	fclose(file); // Fecha o arquivo
 	
-	printf("Digite o cargo a ser cadastrado: "); // Coletando informaÁ„o do usu·rio
+	printf("Digite o cargo a ser cadastrado: "); // Coletando informa√ß√£o do usu√°rio
 	scanf("%s",cargo); // %s refere-se as strings
 	
 	file = fopen(arquivo, "a"); // Abre o arquivo e atualiza
-	fprintf(file,cargo); // Salva o valor da vari·vel
+	fprintf(file,cargo); // Salva o valor da vari√°vel
 	fclose(file); // Fecha o arquivo
 	
     system("pause");			
@@ -64,25 +64,25 @@ int consulta ()
 {
 	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-	// Inicio criaÁ„o de vari·veis/string
+	// Inicio cria√ß√£o de vari√°veis/string
 	char cpf [40]; 
 	char conteudo [200];
-	// Final da criaÁ„o de vari·veis/string
+	// Final da cria√ß√£o de vari√°veis/string
 	
-	printf ("Digite o CPF a ser consultado: "); // Coletando informaÁ„o do usu·rio
+	printf ("Digite o CPF a ser consultado: "); // Coletando informa√ß√£o do usu√°rio
 	scanf("%s", cpf); // %s refere-se as strings
 	
 	FILE *file; // Verifica o arquivo
-	file = fopen(cpf,"r"); // Abre o arquivo e lÍ
+	file = fopen(cpf,"r"); // Abre o arquivo e l√™
 	
 	if(file == NULL)
 	{
-		printf ("N„o foi possÌvel abrir o arquivo, n„o localizado!\n");
+		printf ("N√£o foi poss√≠vel abrir o arquivo, n√£o localizado!\n");
 	}
 	
 	while(fgets(conteudo, 200, file) != NULL)
 	{
-			printf("\nEssas s„o as informaÁıes do usu·rio: ");
+			printf("\nEssas s√£o as informa√ß√µes do usu√°rio: ");
 			printf("%s", conteudo);
 			printf("\n\n");
 	}
@@ -104,7 +104,7 @@ int deletar ()
 	
 	if(file == NULL)
 	{
-		printf ("O usu·rio n„o se encontra no sistema!\n");
+		printf ("O usu√°rio n√£o se encontra no sistema!\n");
 		system("pause");
 	}	
 }
@@ -113,12 +113,12 @@ int deletar ()
 int main ()
     {
     setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
-	int opcao=0; //Definindo vari·veis
+	int opcao=0; //Definindo vari√°veis
 	int laco=1;
 	char senhadigitada[10]="a";
 	int comparacao;
 	
-	printf("### CartÛrio da EBAC ###\n\n");
+	printf("### Cart√≥rio da EBAC ###\n\n");
 	printf("Login de administrador!\n\nDigite a sua senha:");
 	scanf("%s",senhadigitada);
 	
@@ -134,22 +134,22 @@ int main ()
 		
 	    	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 			
-	    	printf ("### CartÛrio da EBAC ###\n\n"); // Inicio do menu
-	    	printf ("Escolha a opÁ„o desejada do menu:\n\n");
+	    	printf ("### Cart√≥rio da EBAC ###\n\n"); // Inicio do menu
+	    	printf ("Escolha a op√ß√£o desejada do menu:\n\n");
 	    	printf ("\t1 - Registrar nomes\n");
 	    	printf ("\t2 - Consultar nomes\n");
 	    	printf ("\t3 - Deletar nomes\n\n"); 
 	    	printf ("\t4 - Sair do sistema\n\n");
-	    	printf ("OpÁ„o: "); // Fim do menu
+	    	printf ("Op√ß√£o: "); // Fim do menu
 		
-	    	scanf("%d", &opcao); // Armazenando a escolha do usu·rio
+	    	scanf("%d", &opcao); // Armazenando a escolha do usu√°rio
 	
-	    	system("cls"); // Respons·vel por limpar a tela
+	    	system("cls"); // Respons√°vel por limpar a tela
     	
-	    	switch(opcao) // Inicio da seleÁ„o do menu
+	    	switch(opcao) // Inicio da sele√ß√£o do menu
 			{
 				case 1:
-				registro (); // chamada de funÁıes
+				registro (); // chamada de fun√ß√µes
 				break;
 				
 				case 2:
@@ -166,10 +166,10 @@ int main ()
 	    		break;
  	   		
 	    		default:
-	    		printf ("Essa opÁ„o n„o est· disponÌvel!\n");
+	    		printf ("Essa op√ß√£o n√£o est√° dispon√≠vel!\n");
  	   		system("pause");
 	    		break;
-			} // Fim da seleÁ„o		
+			} // Fim da sele√ß√£o		
 	    }
 	}
 	
