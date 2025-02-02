@@ -1,31 +1,67 @@
-# Cartório da EBAC
+# 🏛️ Cartório da EBAC
 
-Cartório da EBAC is a C application to register names and additional information of students and teachers from EBAC (Escola Britânica de Artes Criativas), allowing to add, delete, and view records.
+Este é um sistema simples de **cartório digital** desenvolvido em **C**, permitindo **registrar, consultar e deletar registros de usuários**. Criado para fins acadêmicos, o sistema simula um banco de dados baseado em arquivos de texto.
 
-## Features
+---
 
-- Add new records: Users can add new students and teachers, providing their names and additional information.
-- Delete records: Users can delete existing records when necessary.
-- View records: Users can view all stored records, including names and additional information.
+## 📜 Funcionalidades
 
-## How to Use
+✅ **Registro de usuários** com CPF, nome, sobrenome e cargo.  
+✅ **Consulta de registros** a partir do CPF.  
+✅ **Exclusão de registros** de forma definitiva.  
+✅ **Autenticação de administrador** com senha pré-definida.  
+✅ **Interface interativa** no terminal.  
 
-1. **Compilation**: Compile the application using a C compiler.
-   ```
-   gcc cartorio_da_ebac.c -o cartorio_da_ebac
-   ```
+---
 
-2. **Execution**: Run the compiled application.
-   ```
-   ./cartorio_da_ebac
-   ```
+## 🚀 Como Executar
 
-3. **Interacting with the application**: Follow the instructions provided by the application to add, delete, and view records.
+### **1️⃣ Compilar o programa**
+Certifique-se de ter um compilador C instalado, como **GCC**.
 
-## Contribution
+```bash
+gcc CartorioEBAC.c -o CartorioEBAC
+```
 
-This project is still in the initial phase, and contributions are welcome. Feel free to open issues or send pull requests.
+### **2️⃣ Executar o programa**
+Após a compilação, execute o arquivo gerado:
 
---- 
+```bash
+./CartorioEBAC
+```
 
-Feel free to customize or add more details as needed!
+### **3️⃣ Usar o sistema**
+Siga o menu exibido no terminal para **registrar, consultar ou deletar** usuários.
+
+---
+
+## 🔧 Requisitos
+
+- **Compilador C** (GCC ou compatível)
+- **Terminal/Shell** para execução do programa
+- **Sistema operacional**: Windows, Linux ou macOS
+
+---
+
+## 📂 Estrutura do Código
+
+O código está dividido nas seguintes funções:
+
+- `registro()` → Cadastra usuários e armazena os dados em arquivos.
+- `consulta()` → Busca registros a partir do CPF informado.
+- `deletar()` → Remove registros do sistema.
+- `main()` → Interface principal do sistema e controle de fluxo.
+
+---
+
+## 💻 Desenvolvedor
+
+- **[Ellen Cigoli](https://github.com/ellencigoli)**
+
+Caso tenha dúvidas ou sugestões, entre em contato! 💬
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença **MIT**. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
